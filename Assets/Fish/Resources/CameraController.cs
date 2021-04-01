@@ -3,6 +3,7 @@
  * 鱼基类
  * 
  * ****************************/
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TouchScript.Behaviors.Cursors;
@@ -17,8 +18,24 @@ namespace TouchScript
         bool b2 = false;
         private void Awake()
         {
+           
+          
+        }
+       
+        #region   自己添加的事件
+        private void Start()
+        {
+            //base.Start
+            TouchManager.Instance.PointersPressed += pointersPressedHandler;
+            TouchManager.Instance.PointersAdded += pointersAHandler;
+            TouchManager.Instance.FrameStarted += Tstart;
             cursor = GameObject.Find("Cursors").GetComponent<CursorManager>();
 
+           
+        }
+
+        private void Tstart(object sender, EventArgs e)
+        {
             try
             {
                 cursor.gameObject.transform.GetChild(0).gameObject.SetActive(false);
@@ -28,13 +45,7 @@ namespace TouchScript
             {
             }
         }
-        #region   自己添加的事件
-        private void Start()
-        {
-            //base.Start
-            TouchManager.Instance.PointersPressed += pointersPressedHandler;
-            TouchManager.Instance.PointersAdded += pointersAHandler;
-        }
+
         private void pointersPressedHandler(object sender, PointerEventArgs e)
         {
             foreach (var pointer in e.Pointers)

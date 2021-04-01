@@ -75,7 +75,7 @@ public class AddRipper : MonoBehaviour
     {
       
         t += Time.deltaTime;
-        if (t <0.2f)
+        if (t <0.15f)
         {           
             return;
         }

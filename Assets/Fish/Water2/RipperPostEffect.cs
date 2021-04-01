@@ -17,7 +17,7 @@ public class RipperPostEffect : PostEffectBase
     /// <summary>
     /// uv到中心点向量的距离系数
     /// </summary>
-    public float distanceFactor = 80.0f;
+    public float distanceFactor = 10.0f;
     /// <summary>
     /// 时间系数
     /// </summary>
@@ -29,11 +29,11 @@ public class RipperPostEffect : PostEffectBase
     /// <summary>
     /// 波纹半径限制
     /// </summary>
-    public float waveWidth = 0.03f;
+    public float waveWidth = 0.1f;
     /// <summary>
     /// 波纹扩散的速度
     /// </summary>
-    public float waveSpeed = 0.2f;
+    public float waveSpeed = 0.9f;
     /// <summary>
     /// 波纹开始时间
     /// </summary>
@@ -44,7 +44,7 @@ public class RipperPostEffect : PostEffectBase
     public Vector4 startPos = new Vector4(0, 0, 0, 0);
     // Use this for initialization
     public float time;
-    public float MaxTime=2;
+    public float MaxTime=1.5f;
     public Vector4 vector4;
     //public Color color = new Color(1, 1, 1,1);
     public Color color=new Color(0.32f,0.69f,0.69f,0.0002f);

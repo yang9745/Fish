@@ -21,11 +21,11 @@ public class RipperPostEffect : PostEffectBase
     /// <summary>
     /// 时间系数
     /// </summary>
-    public float timeFactor = 1.0f;
+    public float timeFactor = 0.3f;
     /// <summary>
     /// 波纹幅度系数
     /// </summary>
-    public float totalFactor = 100.0f;
+    public float totalFactor = 40.0f;
     /// <summary>
     /// 波纹半径限制
     /// </summary>
@@ -33,7 +33,7 @@ public class RipperPostEffect : PostEffectBase
     /// <summary>
     /// 波纹扩散的速度
     /// </summary>
-    public float waveSpeed = 0.9f;
+    public float waveSpeed = 0.6f;
     /// <summary>
     /// 波纹开始时间
     /// </summary>
@@ -44,7 +44,7 @@ public class RipperPostEffect : PostEffectBase
     public Vector4 startPos = new Vector4(0, 0, 0, 0);
     // Use this for initialization
     public float time;
-    public float MaxTime=1.5f;
+    public float MaxTime=0.7f;
     public Vector4 vector4;
     //public Color color = new Color(1, 1, 1,1);
     public Color color=new Color(0.32f,0.69f,0.69f,0.0002f);

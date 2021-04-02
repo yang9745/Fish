@@ -14,85 +14,46 @@ namespace TouchScript
     {
         public CursorManager cursor;
       //  public Material material;
-        bool b = false;
-        bool b2 = false;
-        private void Awake()
-        {
-           
-          
-        }
+       public static bool b_CloseCursors = false;
+       bool b_Cursor=false;
+    
        
         #region   自己添加的事件
         private void Start()
         {
             //base.Start
             TouchManager.Instance.PointersPressed += pointersPressedHandler;
-            TouchManager.Instance.PointersAdded += pointersAHandler;
-            TouchManager.Instance.FrameStarted += Tstart;
+           // TouchManager.Instance.pointers += pointersAHandler;         
             cursor = GameObject.Find("Cursors").GetComponent<CursorManager>();
+            Cursor.visible = false;
 
+
+        }
+      
+     
            
-        }
-
-        private void Tstart(object sender, EventArgs e)
-        {
-            try
-            {
-                cursor.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                cursor.gameObject.transform.GetChild(1).gameObject.SetActive(false);
-            }
-            catch
-            {
-            }
-        }
-
         private void pointersPressedHandler(object sender, PointerEventArgs e)
-        {
+        {        
             foreach (var pointer in e.Pointers)
-            {
-
+            {              
                 GetRay(pointer.Position);
             }
+        
         }
-        private void pointersAHandler(object sender, PointerEventArgs e)
-        {
-            foreach (var pointer in e.Pointers)
-            {
-
-                GetRay(pointer.Position);
-            }
-        }
+     
         #endregion
-
+        //按下后执行 隐藏
         private void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Alpha3)|| Input.GetKeyDown(KeyCode.Alpha4)||Input.GetKeyDown(KeyCode.Alpha5))
+
+            if(Input.GetKeyDown(KeyCode.Alpha3)|| Input.GetKeyDown(KeyCode.Alpha2))
             {
-                b = !b;
-                if (b)
-                {
-                    cursor.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-                   
-                }
-                else
-                {
-                    cursor.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                    try
-                    {
-                        cursor.gameObject.transform.GetChild(1).gameObject.SetActive(false);
-                    }
-                    catch
-                    {
-                    }
-                }
-               
+                b_CloseCursors = !b_CloseCursors;
             }
-            if(Input.GetMouseButtonDown(1))
+          if(Input.GetKeyDown(KeyCode.Alpha1))
             {
-              //  if (b)              
-              //      material.color = new Color(0, 0, 0, 1);
-              //else
-              //      material.color = new Color(1, 1, 1, 0);
+                b_Cursor = !b_Cursor;
+                Cursor.visible = b_Cursor;
             }
         }
         public void GetRay(Vector2 v2)

@@ -376,3 +376,4 @@ fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 66476e4da15083421188b84faf9f7db7 Assembly-CSharp.dll:TouchScript.Gestures.TransformGestures.PinnedTransformGesture
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TouchScript.LayerManager
+a052ecf501d38beb9654a969a2cb7f1d Assembly-CSharp.dll:.CloseCursors

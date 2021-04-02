@@ -69,7 +69,7 @@ Shader "Custom/RipperShader" {
 	//		col = _TC;
 	//	}
 	//}
-	if (_Vect.x > 0)
+	/*if (_Vect.x > 0)
 	{
 		if (_Vect.y > 0)
 		{
@@ -139,31 +139,9 @@ Shader "Custom/RipperShader" {
 			}
 			
 		}
-	}
-	
-	//if (((offset.x+offset.y )> 0.0002)&& ((offset.x + offset.y) < 0.0005 ))
-	//{
-	//	col.r = _Color.r;
-	//	col.g = _Color.g;
-	//	col.b = _Color.b;
-	//  
-	//}
-
-	
-	//_MainTex= float3(_MainTex.r, _MainTex.g, _MainTex.b * -fadeFactor);
-	
-
+	}*/
 	
 	
-	/*float4 col2 = tex2D(_MainTex, uv);
-	col.r += col2.r;
-	col.g += col2.g;
-	col.b += col2.b;*/
-	//col.a += col2.a;
-	/*col.r += fadeFactor;
-	col.g += fadeFactor;
-	col.b += fadeFactor;
-	col.a += fadeFactor;*/
 	return col;
 	}
 

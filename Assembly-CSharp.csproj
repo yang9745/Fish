@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Fish\Resources\CameraController.cs" />
+    <Compile Include="Assets\Fish\Resources\CloseCursors.cs" />
     <Compile Include="Assets\Fish\Resources\FishBase.cs" />
     <Compile Include="Assets\Fish\Resources\TestEvent.cs" />
     <Compile Include="Assets\Fish\Water2\AddRipper.cs" />
@@ -192,6 +193,7 @@
     <None Include="Assets\TouchScript\Shaders\Cursor.shader" />
     <None Include="Assets\TouchScript\Shaders\DebugMultiplyDepthTest.shader" />
     <None Include="Assets\TouchScript\Shaders\DebugNoDepthTest.shader" />
+    <None Include="Assets\Fish-Project\Shader\Alpha_Texture.shader" />
     <None Include="Assets\TouchScript\Shaders\DebugMultiplyNoDepthTest.shader" />
     <None Include="Assets\TouchScript\Examples\_misc\Shaders\UnlitColor.shader" />
     <None Include="Assets\TouchScript\Examples\_misc\Shaders\BorderDiffuse.shader" />

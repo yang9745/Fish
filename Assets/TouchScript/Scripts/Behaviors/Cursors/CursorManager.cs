@@ -217,7 +217,7 @@ namespace TouchScript.Behaviors.Cursors
             cursor.Hide();
         }
 
-        private void updateCursorSize()
+        public void updateCursorSize()
         {
             if (useDPI) cursorPixelSize = (uint) (cursorSize * TouchManager.Instance.DotsPerCentimeter);
         }

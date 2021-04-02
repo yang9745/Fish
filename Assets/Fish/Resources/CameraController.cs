@@ -46,7 +46,7 @@ namespace TouchScript
         private void Update()
         {
 
-            if(Input.GetKeyDown(KeyCode.Alpha3)|| Input.GetKeyDown(KeyCode.Alpha2))
+            if(Input.GetKeyDown(KeyCode.Alpha2))
             {
                 b_CloseCursors = !b_CloseCursors;
             }
